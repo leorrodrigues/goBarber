@@ -12,6 +12,7 @@ const models = [User, File, Appointment];
 class Database {
 	constructor() {
 		this.init();
+		this.mongo();
 	}
 
 	init() {
@@ -31,6 +32,7 @@ class Database {
 			{
 				useNewUrlParser: true,
 				useFindAndModify: true,
+				useUnifiedTopology: true,
 			}
 		);
 	}
